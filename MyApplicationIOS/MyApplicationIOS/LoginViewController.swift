@@ -8,11 +8,15 @@
 
 import UIKit
 
+var AGENT_NAME=""
+var AGENT_CODE=""
+
 class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var agentCodeTextField: UITextField!
     @IBOutlet weak var idnoTextField: UITextField!
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -26,8 +30,11 @@ class LoginViewController: UIViewController {
     @IBAction func checkLogin(sender: AnyObject) {
         let agentCode=agentCodeTextField.text
         let idno=idnoTextField.text
-        if(agentCode=="12345678"&&idno=="1234567890"){
+        if(agentCode=="1"&&idno=="2"){
             print("ok")
+            AGENT_NAME="admin"
+            AGENT_CODE=agentCode!
+            performSegueWithIdentifier("main", sender: self)
         }else{
             print("error")
         }

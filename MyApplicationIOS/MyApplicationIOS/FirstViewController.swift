@@ -8,10 +8,17 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
 
+class FirstViewController: UIViewController {
+    @IBOutlet weak var agentNameBarButtonItem: UIBarButtonItem!
+    
+    @IBAction func logout(sender: AnyObject) {
+        performSegueWithIdentifier("login", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        agentNameBarButtonItem.title=AGENT_NAME
         // Do any additional setup after loading the view, typically from a nib.
     }
 
