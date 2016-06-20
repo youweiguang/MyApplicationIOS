@@ -9,10 +9,12 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var agentCodeTextField: UITextField!
+    @IBOutlet weak var idnoTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +23,18 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func checkLogin(sender: AnyObject) {
+        let agentCode=agentCodeTextField.text
+        let idno=idnoTextField.text
+        if(agentCode=="12345678"&&idno=="1234567890"){
+            print("ok")
+        }else{
+            print("error")
+        }
 
+    }
+    
+    
     /*
     // MARK: - Navigation
 

@@ -102,13 +102,29 @@
                                 <color key="backgroundColor" red="0.57819241501723462" green="0.94868141110720416" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="登陆"/>
                                 <connections>
+                                    <action selector="checkLogin:" destination="YjS-73-rUd" eventType="touchUpInside" id="beC-Dn-vmJ"/>
                                     <segue destination="49e-Tb-3d3" kind="showDetail" id="LKH-7G-9Qp"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="身份证号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3x8-HW-qS8">
+                                <rect key="frame" x="97" y="190" width="180" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="工号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wnA-KB-044">
+                                <rect key="frame" x="97" y="97" width="180" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="agentCodeTextField" destination="wnA-KB-044" id="azu-ba-fJa"/>
+                        <outlet property="idnoTextField" destination="3x8-HW-qS8" id="7yc-9N-D1u"/>
+                        <outlet property="loginButton" destination="yeL-h9-UNW" id="6Pu-E0-ezP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hRn-YW-z2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
