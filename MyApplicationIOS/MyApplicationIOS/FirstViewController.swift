@@ -11,6 +11,7 @@ import UIKit
 
 class FirstViewController: UIViewController {
     @IBOutlet weak var agentNameBarButtonItem: UIBarButtonItem!
+    @IBOutlet weak var tableView: UITableView!
     
     @IBAction func logout(sender: AnyObject) {
         performSegueWithIdentifier("login", sender: self)
@@ -19,6 +20,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         agentNameBarButtonItem.title=AGENT_NAME
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
