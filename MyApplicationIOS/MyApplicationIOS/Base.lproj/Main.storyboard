@@ -30,19 +30,22 @@
                                 </items>
                             </toolbar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lsn-gf-33T">
-                                <rect key="frame" x="0.0" y="158" width="375" height="124"/>
+                                <rect key="frame" x="0.0" y="219" width="375" height="404"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fR7-sA-6QU">
-                                        <rect key="frame" x="164" y="47" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svO-BP-bLl" userLabel="Button3">
+                                        <rect key="frame" x="251" y="0.0" width="124" height="97"/>
                                         <state key="normal" title="Button"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svO-BP-bLl">
-                                        <rect key="frame" x="329" y="47" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fR7-sA-6QU" userLabel="Button1">
+                                        <rect key="frame" x="0.0" y="-2" width="115" height="102"/>
+                                        <state key="normal" title="考勤"/>
+                                        <connections>
+                                            <action selector="attendance:" destination="9pv-A4-QxB" eventType="touchUpInside" id="y3B-1f-PAl"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jiv-Ud-Lka">
-                                        <rect key="frame" x="0.0" y="47" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jiv-Ud-Lka" userLabel="Button2">
+                                        <rect key="frame" x="127" y="0.0" width="120" height="105"/>
+                                        <state key="normal" title="登记"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -56,11 +59,31 @@
                     <connections>
                         <outlet property="agentNameBarButtonItem" destination="qm5-iE-ALo" id="v0i-Ju-S1t"/>
                         <segue destination="YjS-73-rUd" kind="show" identifier="login" id="TvL-Jf-6xo"/>
+                        <segue destination="0b6-iu-CMh" kind="show" identifier="attendance" id="z4n-kS-TpS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="499.5" y="-764.5"/>
+        </scene>
+        <!--Attendance View Controller-->
+        <scene sceneID="si2-A0-1et">
+            <objects>
+                <viewController id="0b6-iu-CMh" customClass="AttendanceViewController" customModule="MyApplicationIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uyt-L5-FGW"/>
+                        <viewControllerLayoutGuide type="bottom" id="mZX-S7-rqj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aXr-K8-shE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oKJ-bj-LZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938" y="-925"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">

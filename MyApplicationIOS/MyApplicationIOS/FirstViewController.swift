@@ -11,10 +11,16 @@ import UIKit
 
 class FirstViewController: UIViewController {
     @IBOutlet weak var agentNameBarButtonItem: UIBarButtonItem!
-    @IBOutlet weak var tableView: UITableView!
-    
+   
+    //注销
     @IBAction func logout(sender: AnyObject) {
         performSegueWithIdentifier("login", sender: self)
+    }
+    
+    //考勤功能
+    @IBAction func attendance(sender: AnyObject) {
+        performSegueWithIdentifier("attendance", sender: self)
+        
     }
     
     override func viewDidLoad() {
